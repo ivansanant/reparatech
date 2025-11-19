@@ -1,0 +1,193 @@
+/* src/styles/Home.css */
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.5rem;
+}
+
+/* CAMBIO: Renombramos a bg-blue-theme y aplicamos el azul #0d6efd */
+.bg-blue-theme {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.bg-black-theme {
+    background-color: #111;
+    color: white;
+}
+
+.card-custom {
+    border: 1px solid #dee2e6; 
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    background-color: white;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    border-color: #ced4da;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* CAMBIO: Renombramos a btn-blue-theme */
+.btn-blue-theme {
+    background-color: #0d6efd; /* El azul solicitado */
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 12px;
+}
+
+.btn-blue-theme:hover {
+    background-color: #0b5ed7; /* Un azul un poco más oscuro para el efecto hover */
+    color: white;
+}
+
+.btn-outline-black {
+    border: 2px solid #111;
+    color: #111;
+    font-weight: 600;
+    padding: 12px;
+    background-color: transparent;
+}
+
+.btn-outline-black:hover {
+    background-color: #111;
+    color: white;
+}
+
+.feature-list {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.feature-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #555;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: inherit; 
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Clase utilitaria para texto azul (reemplaza los estilos en línea) */
+.text-blue-theme {
+    color: #0d6efd !important;
+}
+
+.input-custom {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.input-custom:focus {
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+/* --- NUEVOS ESTILOS PARA SECCIONES ADICIONALES --- */
+
+/* Mini Tarjetas de Producto */
+.product-mini-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.product-mini-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #0d6efd;
+}
+
+.product-mini-card img {
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Lista de Cursos */
+.course-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: white;
+}
+
+.course-card:hover {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+/* Cajas de Estadísticas */
+.stat-box {
+    background-color: #f1f3f5;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    color: #ff5400; /* Mantenemos el naranja solo para números de impacto o usamos azul */
+    color: #0d6efd; /* Usamos azul para consistencia */
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Testimonios */
+.testimonial-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    background: white;
+    height: 100%;
+    text-align: left;
+}
+
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #dee2e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Barra de Marcas */
+.brand-bar {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+    color: #adb5bd;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

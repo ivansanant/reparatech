@@ -1,0 +1,192 @@
+/* src/styles/Shop.css */
+
+/* --- CONTENEDOR GENERAL --- */
+.shop-container {
+    text-align: left; /* Alineación general a la izquierda */
+    margin-bottom: 5rem;
+}
+
+/* --- SIDEBAR (FILTROS) --- */
+.filters-sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    
+    /* EFECTO STICKY: Hace que la barra se pegue al techo al bajar */
+    position: -webkit-sticky; /* Soporte para Safari */
+    position: sticky;
+    top: 20px; /* Margen superior cuando se pega */
+    z-index: 5;
+    /* Esto asegura que la columna visualmente acompañe al usuario */
+}
+
+.filter-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #212529;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-header {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex; /* Para alinear texto e icono si se usa flex */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.category-list li {
+    margin-bottom: 8px;
+    color: #6c757d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-list li:hover, 
+.category-list li.active {
+    color: #0d6efd; /* Azul institucional (antes era naranja) */
+    font-weight: 600;
+}
+
+.checkbox-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-right: 8px;
+}
+
+/* --- PRODUCT GRID CARD (TARJETA DE TIENDA) --- */
+.shop-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+    position: relative; /* Necesario para posicionar los badges absolutos */
+    overflow: hidden;
+    height: 100%; /* Para que todas las tarjetas de la fila tengan la misma altura */
+}
+
+.shop-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: #adb5bd;
+    transform: translateY(-3px);
+}
+
+/* Placeholder para simular imagen */
+.image-placeholder {
+    background-color: #e9ecef;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #495057;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.shop-card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 180px); /* Restamos la altura de la imagen */
+}
+
+/* --- BADGES (ETIQUETAS) --- */
+.badge-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Variantes de color para badges */
+.badge-oled { background-color: #ff4500; }     /* Rojo/Naranja */
+.badge-original { background-color: #0d6efd; } /* Azul */
+.badge-aaa { background-color: #ffc107; color: #000; } /* Amarillo */
+.badge-premium { background-color: #212529; }  /* Negro */
+.badge-incell { background-color: #6f42c1; }   /* Violeta */
+
+.stock-badge {
+    display: inline-block;
+    background-color: #e6fffa;
+    color: #00bfa5; /* Verde agua */
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+/* --- TIPOGRAFÍA Y PRECIOS --- */
+.shop-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.4;
+    color: #212529;
+}
+
+.shop-sku {
+    font-size: 0.75rem;
+    color: #adb5bd;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.shop-price {
+    color: #0d6efd; /* Azul institucional */
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* --- BOTÓN AÑADIR --- */
+.btn-add-cart {
+    background-color: #0d6efd; /* Azul institucional */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn-add-cart:hover {
+    background-color: #0b5ed7;
+    color: white;
+    transform: scale(1.05);
+}

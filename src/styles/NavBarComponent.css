@@ -1,0 +1,88 @@
+/* src/styles/NavBarComponent.css */
+
+/* 1. Fondo Dark Mode */
+.navbar {
+    background-color: #030213 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    position: relative; /* Necesario para el centrado absoluto de los hijos */
+}
+
+/* 2. Estilos de Links */
+.navbar-dark .navbar-nav .nav-link {
+    color: #b6b7b9 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.05rem; /* Un poquito más grandes para mejor lectura */
+}
+
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* 3. Botones Login/Registro */
+.btn-login-custom {
+    border: none !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.btn-login-custom:hover { color: #0d6efd !important; }
+
+.btn-register-custom {
+    background-color: #0d6efd !important;
+    border: 1px solid #0d6efd !important;
+    color: #ffffff !important;
+    font-weight: 500;
+}
+.btn-register-custom:hover {
+    background-color: #0b5ed7 !important;
+    border-color: #0a58ca !important;
+}
+
+/* --- LÓGICA DE CENTRADO Y ESPACIADO --- */
+
+/* Espaciado entre links (funciona en móvil y escritorio) */
+.nav-links-custom {
+    gap: 2rem; /* Aumentamos la separación entre cada link (Tienda - Academia - etc) */
+}
+
+/* Reglas solo para Escritorio (lg) */
+@media (min-width: 992px) {
+    .nav-links-custom {
+        position: absolute;       /* Lo sacamos del flujo normal */
+        left: 50%;                /* Lo movemos al medio */
+        transform: translateX(-50%); /* Lo ajustamos para que su propio centro sea el eje */
+        margin: 0 !important;
+        width: max-content;       /* Asegura que no se estire */
+    }
+    
+    /* Aseguramos que los botones se queden a la derecha */
+    .navbar-collapse {
+        justify-content: flex-end; /* Empuja el contenido normal (botones) a la derecha */
+    }
+}
+
+/* Reglas para Móvil */
+@media (max-width: 991px) {
+    .nav-links-custom {
+        gap: 0.5rem; /* Menos espacio en vertical */
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .d-flex {
+        width: 100%;
+        justify-content: flex-start; /* Botones a la izquierda en móvil */
+        margin-top: 1rem;
+    }
+
+    .cart-icon { display: none; }
+}

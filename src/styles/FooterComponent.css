@@ -1,0 +1,79 @@
+/* src/styles/FooterComponent.css */
+
+.reparatech-footer {
+    background-color: #030213 !important;
+    color: #717182 !important;
+    padding-top: 2rem;      /* REDUCIDO: Antes era 3rem */
+    padding-bottom: 1rem;   /* AÑADIDO: Un poco de espacio abajo antes de la barra */
+    font-size: 0.85rem;     /* REDUCIDO: Texto un poco más compacto */
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+}
+
+.reparatech-footer p,
+.reparatech-footer li,
+.reparatech-footer span {
+    color: #717182 !important;
+}
+
+.reparatech-footer h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;       /* REDUCIDO: Menos espacio debajo del título */
+    font-size: 1rem;           /* REDUCIDO: Título un poco más chico */
+    color: #ffffff !important;
+    border-bottom: 2px solid #0d6efd;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.reparatech-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.reparatech-footer li {
+    margin-bottom: 0.3rem; /* REDUCIDO: Menos espacio entre items de lista */
+}
+
+.reparatech-footer a {
+    color: #717182 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.reparatech-footer a:hover {
+    color: #0d6efd !important;
+}
+
+/* Estilos especiales para iconos de contacto (Accent Blue) */
+.icon-accent {
+    color: #0d6efd !important;
+}
+
+.social-icons {
+    margin-top: 0.5rem; /* REDUCIDO */
+}
+
+.social-icons svg {
+    font-size: 1.2rem; /* REDUCIDO: Iconos un poco más sutiles */
+    margin-right: 0.8rem;
+    cursor: pointer;
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.social-icons svg:hover {
+    color: #0d6efd !important;
+}
+
+/* BARRA INFERIOR MÁS COMPACTA Y ARRIBA */
+.footer-bottom {
+    background-color: #02010d !important;
+    padding: 0.8rem 0;      /* REDUCIDO: Antes 1.5rem */
+    margin-top: 1rem;       /* REDUCIDO: Antes 2rem, sube la barra */
+    border-top: 1px solid #1a1a2e;
+    font-size: 0.8rem;
+}
